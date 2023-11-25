@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Team Registration</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Gruppo">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <style>
+      a {
+  text-decoration: none;
+}
+    .mySlides {display:none}
+      .w3-tag, .fa {cursor:pointer}
+      .w3-tag {height:15px;width:15px;padding:0;margin-top:6px}
+
+      #audioPlayer {
+      display: none;
+    }
+
+      .w3-right-align {
+          text-align: right;
+          float: right;
+      }
+              body, h1, h2, h4 {
+                  font-family: 'Gruppo', sans-serif;
+              }
+              body, html {
+                  height: 100%;
+              }
+              .bgimg {
+                  position: relative;
+                  min-height: 100%;
+                  background-position: center;
+                  background-size: cover;
+                  animation: slideshow 10s linear infinite;
+              }
+              .bgimg::before {
+                  content: "";
+                  position: absolute;
+                  top: 0;
+                  right: 0;
+                  bottom: 0;
+                  left: 0;
+                  background: rgba(0, 0, 0, 0.5); /* Adjust the opacity as needed */
+              }
+              @keyframes slideshow {
+                  0%, 100% {
+                      background-image: url('69.jpg');
+                  }
+                  33.33% {
+                      background-image: url('79.jpg');
+                  }
+                  66.66% {
+                    background-image: url('89.jpg');
+                  }
+              }
+              .w3-display-container {
+                  text-align: center;
+              }
+              .w3-display-middle {
+                  position: absolute;
+                  top: 50%;
+                  left: 50%;
+                  transform: translate(-50%, -50%);
+                  text-align: center;
+              }
+              .w3-display-topleft img {
+                  width: 100px; /* Adjust the width as needed */
+              }
+      
+              #topMenu.hidden {
+        display: none;
+      }
+
+      /* Added styles for the audio toggle */
+      .audio-toggle {
+        position: fixed;
+        bottom: 50px;
+        right: 50px;
+        cursor: pointer;
+        z-index: 1000;
+      }
+
+      .w3-close {
+            color: white;
+        }
+
+        a:link, a:visited {
+        text-decoration: none;
+    }
+
+    a:hover, a:active {
+        text-decoration: none;
+    }
+          </style>
+</head>
+<body>
+    <div class="bgimg w3-display-container w3-animate-opacity w3-text-black">
+        <nav class="w3-sidebar w3-bar-block w3-card w3-top w3-xlarge w3-animate-left" style="display:none;z-index:2;width:40%;min-width:300px; background-color: black;" id="mySidebar">
+        <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-right-align"><font color="white">X</font></a>
+        <a href="index.html" onclick="w3_close()" class="w3-bar-item w3-button"><font color="white">Home</font></a>
+        <a href="about.html" onclick="w3_close()" class="w3-bar-item w3-button"><font color="white">About</font></a>
+        <a href="profilepage.html" onclick="w3_close()" class="w3-bar-item w3-button"><font color="white">Profile</font></a>
+        <a href="signup.html" onclick="w3_close()" class="w3-bar-item w3-button"><font color="white">Signup</font></a>
+        <a href="loginpage.html" onclick="w3_close()" class="w3-bar-item w3-button"><font color="white">Login</font></a>
+        <a href="eventspage.html" onclick="w3_close()" class="w3-bar-item w3-button"><font color="white">Event</font></a>
+        <a href="teamregistration.html" onclick="w3_close()" class="w3-bar-item w3-button"><font color="white">Team Registration</font></a>
+        <a href="rulesandregulation.html" onclick="w3_close()" class="w3-bar-item w3-button"><font color="white">Rules and Regulation</font></a>
+      </nav>
+      
+      <!-- Top menu -->
+      <div class="w3-top" id="topMenu">
+        <div class="w3-xlarge" style="max-width:1200px;margin:auto">        
+          <div class="w3-button w3-padding-16 w3-left" onclick="w3_open()"><font color="white">☰</font></div>
+          <div class="w3-right w3-padding-16"><font color="white">ARS</font></div>
+          <div class="w3-center w3-padding-16"><img src="Esports.png" style="width: 6%;"></div>
+        </div>
+      </div>
+        <div class="w3-display-middle">
+            <h1 class="w3-jumbo w3-animate-top"><font color="white">GAMING ESPORTS</font></h1>
+            <hr class="w3-border-grey" style="margin:auto;width:70%">
+            <p class="w3-large w3-center w3-animate-top"><font color="white">FOR A CAUSE</font></p>
+        </div>
+    </div>
+
+  <!--Div-->
+  <div class="w3-light-grey" id="tour">
+    <div class="w3-container w3-content w3-padding-64" style="max-width:800px">
+      <h1 class="w3-wide w3-center w3-jumbo">Team Registration</h1>
+      <p class="w3-opacity w3-center"><i>For all the teams <3</i></p><br>
+      <p class="w3-justify">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        Embark on an exhilarating journey with ARS Gaming, where our Team Registration process serves as the cornerstone in building a community united by a passion for gaming. In the virtual arenas, we intricately orchestrate the steps to register teams, not to confine but to enhance the gaming experience, creating an atmosphere where camaraderie, skill, and competition seamlessly converge. As you delve into the ARS gaming universe, recognize that each team registration, every strategic alliance, and each victorious moment contributes to a larger narrative—one that extends beyond the digital realm, resonating with the spirit of positive change. Join us in this virtual odyssey where gaming goes beyond mere entertainment, becoming a catalyst for meaningful transformations within the world around us.</p><br><br>
+
+      <div class="bgimg w3-card-4 w3-display-container w3-animate-opacity w3-container w3-padding w3-container">
+        <h4><font color="white">Valorant</font></h4>
+        <div class="w3-display-container mySlides">
+          <img src="Teaser(2).png" style="width:100%">
+          <div class="w3-display-topleft w3-container w3-padding-32">
+          </div>
+      </div>
+      <div class="w3-display-container mySlides">
+          <img src="Teaser(3).jpeg" style="width:100%">
+          <div class="w3-display-middle w3-container w3-padding-32">
+          </div>
+      </div>
+      <div class="w3-display-container mySlides">
+          <img src="Teaser(4).jpg" style="width:100%">
+          <div class="w3-display-topright w3-container w3-padding-32">
+          </div>
+      </div>
+      <div class="w3-display-container mySlides">
+          <img src="Teaser(5).jpg" style="width:100%">
+          <div class="w3-display-topleft w3-container w3-padding-32">
+          </div>
+      </div>
+      <div class="w3-display-container mySlides">
+          <img src="Teaser(6).jpg" style="width:100%">
+          <div class="w3-display-middle w3-container w3-padding-32">
+          </div>
+      </div>
+
+      <!-- Navigation dots -->
+      <div class="w3-container w3-padding w3-xlarge">
+      <div class="w3-grayscale w3-center">
+          <span class="w3-tag demodots w3-border w3-transparent w3-hover-white" onclick="currentDiv(1)"></span>
+          <span class="w3-tag demodots w3-border w3-transparent w3-hover-white" onclick="currentDiv(2)"></span>
+          <span class="w3-tag demodots w3-border w3-transparent w3-hover-white" onclick="currentDiv(3)"></span>
+          <span class="w3-tag demodots w3-border w3-transparent w3-hover-white" onclick="currentDiv(4)"></span>
+          <span class="w3-tag demodots w3-border w3-transparent w3-hover-white" onclick="currentDiv(5)"></span>
+      </div>
+    </div>
+    </div>
+      <br><br><br><div class="bgimg w3-card-4 w3-display-container w3-animate-opacity w3-container w3-padding w3-black">
+        <h4>Games</h4>
+      </div>
+      <ul class="w3-ul w3-border w3-white w3-text-grey">
+        <li class="w3-padding" onclick="scrollToGame('valorant')"><font color="black">Valorant </font><span class="w3-badge w3-right w3-margin-right">>></span></li>
+        <li class="w3-padding" onclick="scrollToGame('csgo')"><font color="black">Counter-Strike: Global Offensive 2</font><span class="w3-badge w3-right w3-margin-right">>></span></li>
+        <li class="w3-padding" onclick="scrollToGame('lol')"><font color="black">League of Legends </font><span class="w3-badge w3-right w3-margin-right">>></span></li>
+      </ul><br>
+<br>
+      <div class="w3-row-padding w3-padding-32" style="margin:0 -16px">
+        <div class="w3-third w3-margin-bottom" id="valorant">
+          <div class="w3-center w3-card-4 w3-padding bgimg w3-display-container w3-animate-opacity w3-container ">
+            <h4><font color="white">Valorant</font></h4>
+          </div>
+          <img src="valo.gif" alt="Counter-Strike: Global Offensive" style="width:100%; height: 138px;" class="w3-hover-opacity">
+          <div class="w3-container w3-white">
+            <p class="w3-opacity">Sat 25 November 2023</p>
+            <p>Valorant is a strategic FPS melding precise gunplay with unique agent abilities, emphasizing teamwork and skill in diverse game modes.</p>
+            <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">Register</button>
+          </div>
+        </div>
+        <div class="w3-third w3-margin-bottom" id="csgo">
+          <div class="w3-center w3-card-4 w3-padding bgimg w3-display-container w3-animate-opacity w3-container ">
+            <h4><font color="white">CS:GO 2</font></h4>
+          </div>
+          <img src="csgo.gif" alt="Valorant" style="width:100%;" class="w3-hover-opacity">
+          <div class="w3-container w3-white">
+            <p class="w3-opacity">Sat 25 November 2023</p>
+            <p>CS:GO 2 is a high-stakes tactical first-person shooter where terrorists and counter-terrorists engage in intense, firefights and maneuvers.</p>
+            <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">Register</button>
+          </div>
+        </div>
+        <div class="w3-third w3-margin-bottom" id="lol">
+          <div class="w3-center w3-card-4 w3-padding bgimg w3-display-container w3-animate-opacity w3-container ">
+            <h4><font color="white">LoL</font></h4>
+          </div>
+          <img src="akali.gif" alt="League of Legends" style="width:100%; height: 138px;" class="w3-hover-opacity">
+          <div class="w3-container w3-white">
+            <p class="w3-opacity">Sat 25 November 2023</p>
+            <p>LoL is a fast-paced MOBA where teams of champions battle to destroy the opposing Nexus, blending strategy and skill in a dynamic battlefield.</p>
+            <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">Register</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="w3-grayscale">
+      <!-- Added a container for the audio toggle -->
+      <div class="audio-toggle" onclick="startAudio()">
+        <img src="disc.gif" alt="Toggle Audio" style="width: 50px; height: 50px;">
+      </div>
+      <audio id="audioPlayer" loop>
+        <source src="NewJeans.mp3" type="audio/mp3">
+        Your browser does not support the audio tag.
+      </audio>
+    </div>
+  </div>
+
+<!--Further-->
+<div id="ticketModal" class="w3-modal">
+  <div class="w3-modal-content w3-animate-top w3-card-4">
+    <header class="bgimg w3-container w3-animate-opacity w3-center w3-padding-32"> 
+      <span onclick="document.getElementById('ticketModal').style.display='none'" 
+     class="w3-close w3-button w3-xlarge w3-display-topright">×</span>
+     <h2 class="w3-wide"><font color="white">Team Registration</font></h2>
+    </header>
+    <div class="w3-container">
+      <p><br>
+          <label><b>1. Valorant:</b></label><br><br>
+          <a href="https://forms.gle/aVNxb3vTRTqGu9APA" target="_blank">https://forms.gle/aVNxb3vTRTqGu9APA</a><br><br>
+      
+          <label><b>2. CS:GO 2:</b></label><br><br>
+          <a href="https://forms.gle/aVNxb3vTRTqGu9APA" target="_blank">https://forms.gle/aVNxb3vTRTqGu4YEK</a><br><br>
+      
+          <label><b>3. League of Legends:</b></label><br><br>
+          <a href="https://forms.gle/aVNxb3vTRTqGu9APA" target="_blank">https://forms.gle/aVNxb3vTRTqGu7UBY</a><br>
+      </p><br>
+      
+        <div class="w3-container w3-margin-top w3-center">
+          <input type="checkbox" id="agreeCheckbox">
+          <label for="agreeCheckbox">&nbsp;I hereby acknowledge and commit to adhere to the specified terms and conditions for team registration.</label>
+        </div>
+        <br><button onclick="proceedIfAgreed()" class="bgimg w3-container w3-animate-opacity w3-button w3-block w3-padding-16 w3-section w3-right">
+          <font color="white">OKAY</font><i class="fa fa-check"></i>
+    </div>
+  </div>
+</div>
+
+<script>
+  //slideshow
+  var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function currentDiv(n) {
+  showDivs(slideIndex = n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demodots");
+  if (n > x.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = x.length} ;
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" w3-white", "");
+  }
+  x[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " w3-white";
+}
+  function startAudio() {
+  var audio = document.getElementById('audioPlayer');
+
+  // If audio is paused or has ended, play it
+  if (audio.paused || audio.ended) {
+    audio.play();
+  } else {
+    // If audio is playing, pause it
+    audio.pause();
+  }
+}
+
+
+  var prevScrollpos = window.pageYOffset;
+    window.onscroll = function() {
+      var currentScrollPos = window.pageYOffset;
+
+  if (prevScrollpos > currentScrollPos) {
+    document.getElementById("topMenu").classList.remove("hidden");
+  } else {
+    document.getElementById("topMenu").classList.add("hidden");
+  }
+  prevScrollpos = currentScrollPos;
+};
+
+  function scrollToGame(gameId) {
+    // Find the corresponding div element by ID
+    var gameDiv = document.getElementById(gameId);
+
+    // Scroll to the top of the game's div with smooth behavior
+    gameDiv.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+
+  function proceedIfAgreed() {
+    // Check if the checkbox is checked
+    if (document.getElementById('agreeCheckbox').checked) {
+      // Show a confirmation pop-up
+      var confirmation = window.confirm("We appreciate your commitment to adhering to the specified terms and conditions for team registration!");
+      
+      if (confirmation) {
+        // Proceed with the desired action (closing the modal in this case)
+        document.getElementById('ticketModal').style.display = 'none';
+      }
+    } else {
+      // Display a message or take appropriate action if the checkbox is not checked
+      alert("Before proceeding, we kindly request your agreement with the specified terms and conditions for team registration.");
+    }
+  }
+
+  function confirmNavigation() {
+    var confirmation = window.confirm("Proceeding to the About page. Are you sure?");
+
+    if (confirmation) {
+      window.location.href = "about.html";
+    }
+  }
+
+  const sidebarLinks = document.querySelectorAll("#mySidebar a");
+  sidebarLinks.forEach(function (link) {
+    link.addEventListener("click", function (event) {
+      event.preventDefault();
+      if (link.textContent.trim() !== "X") { // Excluding the "X" link
+        const confirmation = confirm(`Proceeding to the ${link.textContent.trim()} page. Are you sure?`);
+        if (confirmation) {
+          window.location.href = link.getAttribute("href");
+        }
+      } else {
+        w3_close(); // Close the sidebar without asking for confirmation
+      }
+    });
+  });
+
+  function w3_open() {
+    document.getElementById("mySidebar").style.display = "block";
+  }
+
+  function w3_close() {
+    document.getElementById("mySidebar").style.display = "none";
+  }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Login</title>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Gruppo">
+<style>
+        .progress-bar {
+        width: 20%;
+        height: 10px;
+        background-color: #ccc;
+        border-radius: 5px;
+    }
+
+    .progress-indicator {
+        width: 55%;
+        height: 100%;
+        background-color: #4CAF50;
+        border-radius: 5px;
+    }
+    
+    body, h1 {
+        font-family: 'Gruppo', sans-serif;
+    }
+    body, html {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    .bgimg {
+        position: relative;
+        min-height: 100%;
+        background-position: center;
+        background-size: cover;
+        animation: slideshow 10s linear infinite;
+    }
+    .bgimg::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: rgba(0, 0, 0, 0.5);
+    }
+    @keyframes slideshow {
+            0%, 100% {
+                background-image: url('q.jpg');
+            }
+            33.33% {
+                background-image: url('n.jpg');
+            }
+            66.66% {
+              background-image: url('l.jpg');
+            }
+        }
+    .w3-display-container {
+        text-align: center;
+    }
+    .w3-display-middle {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+    .w3-display-topleft img {
+        width: 100px; 
+    }
+
+    .signup-container {
+        width: 50%;
+        height: 80%; 
+        margin: auto;
+        padding: 20px;
+        background-color: rgba(0, 0, 0, 0.7); 
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        color: white; 
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around; 
+    }
+
+    .form-group {
+        width: auto; 
+    }
+
+    .form-group label {
+        font-weight: bold;
+    }
+    .form-group input[type="text"], .form-group input[type="password"] {
+        width: 100%; 
+        padding: 10px; 
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    .form-group input[type="password"] {
+        padding: 8px;
+    }
+
+    .form-group .radio-group {
+        display: flex;
+        align-items: center;
+    }
+    .form-group .radio-group label {
+        margin-right: 10px;
+    }
+    .form-group button {
+        width: auto; 
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .form-group input[type="submit"],
+    .form-group button.next {
+        width: auto; 
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .form-group button.next {
+        background-color: #4CAF50;
+    }
+
+    .form-group input[type="submit"] {
+        background-color: #FF5733;
+    }
+
+.w3-right-align {
+    text-align: right;
+    float: right;
+}
+
+</style>
+</head>
+<body>
+    <div class="bgimg w3-display-container w3-animate-opacity w3-text-black">
+        <nav class="w3-sidebar w3-bar-block w3-card w3-top w3-xlarge w3-animate-left" style="display:none;z-index:2;width:40%;min-width:300px; background-color: black;" id="mySidebar">
+        <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-right-align"><font color="white">X</font></a>
+        <a href="index.html" onclick="w3_close()" class="w3-bar-item w3-button"><font color="white">Home</font></a>
+        <a href="about.html" onclick="w3_close()" class="w3-bar-item w3-button"><font color="white">About</font></a>
+        <a href="profilepage.html" onclick="w3_close()" class="w3-bar-item w3-button"><font color="white">Profile</font></a>
+        <a href="signup.html" onclick="w3_close()" class="w3-bar-item w3-button"><font color="white">Signup</font></a>
+        <a href="loginpage.html" onclick="w3_close()" class="w3-bar-item w3-button"><font color="white">Login</font></a>
+        <a href="eventspage.html" onclick="w3_close()" class="w3-bar-item w3-button"><font color="white">Event</font></a>
+        <a href="teamregistration.html" onclick="w3_close()" class="w3-bar-item w3-button"><font color="white">Team Registration</font></a>
+        <a href="rulesandregulation.html" onclick="w3_close()" class="w3-bar-item w3-button"><font color="white">Rules and Regulation</font></a>
+      </nav>
+      
+      <!-- Top menu -->
+      <div class="w3-top">
+        <div class="w3-xlarge" style="max-width:1200px;margin:auto">
+            <div class="w3-button w3-padding-16 w3-left" onclick="w3_open()"><font color="white">☰</font></div>
+            <div class="w3-right w3-padding-16"></div>
+            <div class="w3-center w3-padding-16">
+                <div style="float: left; width: 50%;"></div>
+                <img src="Esports.png" style="width: 6%; float: right;" onclick="confirmNavigation()"></div>
+            </div>
+        </div>
+    </div>
+
+            <div class="w3-display-middle signup-container">
+                <h1 class="w3-jumbo w3-animate-top">Login</h1>
+                <div class="progress-bar">
+                    <div class="progress-indicator"></div>
+                </div>
+                <br>
+                <form class="signup-form">
+                    <div class="form-group">
+                        <label for="username">Username:</label>
+                        <input type="text" id="username" placeholder="Enter your username">
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <label for="password">Password:</label>
+                        <input type="password" id="password" placeholder="Enter your password">
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="terms" name="terms">
+                            <label for="terms">&nbsp;&nbsp;&nbsp;I agree to the terms and conditions</label>
+                        </div>
+                        <br>
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" value="Back">
+                        <button class="next">Next</button>
+                    </div>
+                </form>
+                <br>
+    </div>
+</div>
+
+<script>
+    function confirmNavigation() {
+        var confirmation = window.confirm("Proceeding to the About page. Are you sure?");
+
+        if (confirmation) {
+            window.location.href = "about.html";
+        }
+    }
+
+    function w3_open() {
+        document.getElementById("mySidebar").style.display = "block";
+    }
+
+    function w3_close() {
+        document.getElementById("mySidebar").style.display = "none";
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+        const form = document.querySelector('.signup-form');
+        form.addEventListener('submit', function (event) {
+            const usernameInput = document.getElementById('username');
+            const passwordInput = document.getElementById('password');
+            const termsCheckbox = document.getElementById('terms');
+
+            const enteredUsername = usernameInput.value;
+            const enteredPassword = passwordInput.value;
+            const isTermsChecked = termsCheckbox.checked;
+
+            if (!enteredUsername || !enteredPassword || !isTermsChecked) {
+                if (!enteredUsername) {
+                    usernameInput.style.borderColor = 'red';
+                } else {
+                    usernameInput.style.borderColor = '';
+                }
+
+                if (!enteredPassword) {
+                    passwordInput.style.borderColor = 'red';
+                } else {
+                    passwordInput.style.borderColor = '';
+                }
+
+                if (!isTermsChecked) {
+                    termsCheckbox.style.outline = '2px solid red';
+                } else {
+                    termsCheckbox.style.outline = '';
+                }
+
+                event.preventDefault();
+            } else {
+                const successMessage = `Congratulations, ${enteredUsername}, you are officially part of this team!`;
+                alert(successMessage);
+            }
+        });
+
+        const backButton = document.querySelector('input[type="submit"]');
+        backButton.addEventListener('click', function (event) {
+            const confirmation = confirm('Proceeding back to the Home page. Are you sure?');
+            if (!confirmation) {
+                event.preventDefault();
+            }
+        });
+
+        const sidebarLinks = document.querySelectorAll("#mySidebar a");
+        sidebarLinks.forEach(function (link) {
+            link.addEventListener("click", function (event) {
+                event.preventDefault();
+                if (link.textContent.trim() !== "X") { // Excluding the "X" link
+                    const confirmation = confirm(`Proceeding to the ${link.textContent.trim()} page. Are you sure?`);
+                    if (confirmation) {
+                        window.location.href = link.getAttribute("href");
+                    }
+                } else {
+                    w3_close(); // Close the sidebar without asking for confirmation
+                }
+            });
+        });
+    });
+</script>
+</body>
+</html>
